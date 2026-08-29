@@ -1,22 +1,8 @@
-# BUKHORIY CS2 CONFIG
+# BUKHORIY — CS2 CONFIG
 
-My personal Counter-Strike 2 config for quickly restoring my settings on different PCs and gaming clubs.
+Portable Counter-Strike 2 configuration for quickly restoring my setup on any PC or gaming club computer.
 
-## Main Settings
-
-* Sensitivity: `0.90`
-* Resolution: `1280x1024`
-* V-Sync: `Off`
-* Low Latency: `On`
-* Viewmodel FOV: `68`
-* Custom crosshair
-* Custom radar/HUD
-* Custom keybinds
-* Custom audio settings
-
-## Installation
-
-### 1. Download
+## Quick Setup
 
 Download:
 
@@ -24,91 +10,315 @@ Download:
 bukhoriy.cfg
 ```
 
-### 2. Open the CS2 folder
-
-Steam:
+Put it here:
 
 ```text
-CS2 → Properties → Installed Files → Browse
+...\Counter-Strike Global Offensive\game\csgo\cfg\
 ```
 
-Then go to:
-
-```text
-game\csgo\cfg
-```
-
-Full default location:
-
-```text
-C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg
-```
-
-### 3. Put the config there
-
-Copy:
-
-```text
-bukhoriy.cfg
-```
-
-into the `cfg` folder.
-
-### 4. Launch CS2
-
-Enable Developer Console if needed:
-
-```text
-Settings → Game → Enable Developer Console → Yes
-```
-
-Open the console with:
-
-```text
-~
-```
-
-Then type:
+Launch CS2, open console with `~`, then run:
 
 ```text
 exec bukhoriy
 ```
 
-If successfully loaded, the console should show:
+Done.
+
+---
+
+## My CS2 Settings
+
+### Mouse
 
 ```text
-BUKHORIY PORTABLE CONFIG LOADED
+Sensitivity: 0.90
 ```
 
-## Gaming Club Setup
+> Mouse DPI must be set manually because DPI is controlled by the mouse/software, not CS2.
 
-When using a new PC:
+### Resolution
 
 ```text
-1. Download bukhoriy.cfg
-2. Put it inside game\csgo\cfg
-3. Launch CS2
-4. Open console
-5. exec bukhoriy
-6. Set mouse DPI manually
+1280 × 1024
 ```
 
-## Important
+### Video
 
-The config restores CS2 settings, but some hardware settings still need to be configured manually.
+```text
+V-Sync: OFF
+Low Latency: ON
+```
 
-For example:
+### Viewmodel
 
-* Mouse DPI
-* Monitor refresh rate
-* NVIDIA/AMD settings
-* Windows mouse settings
-* Audio device
-* Microphone device
+```text
+viewmodel_fov 68
+```
 
-## Backup Files
+The config also contains my:
 
-This repository may also contain my original CS2 configuration files:
+* Crosshair
+* Viewmodel
+* Radar settings
+* HUD settings
+* Mouse sensitivity
+* Keybinds
+* Movement binds
+* Audio settings
+* FPS/gameplay settings
+
+---
+
+# Installation
+
+## Method 1 — Gaming Club / New PC
+
+### Step 1
+
+Open Steam.
+
+Go to:
+
+```text
+Library
+→ Counter-Strike 2
+→ Properties
+→ Installed Files
+→ Browse
+```
+
+### Step 2
+
+Open:
+
+```text
+game
+→ csgo
+→ cfg
+```
+
+Usually:
+
+```text
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg
+```
+
+### Step 3
+
+Download `bukhoriy.cfg` from this repository.
+
+Move it into:
+
+```text
+game\csgo\cfg
+```
+
+### Step 4
+
+Launch CS2.
+
+Make sure Developer Console is enabled:
+
+```text
+Settings
+→ Game
+→ Enable Developer Console (~)
+→ YES
+```
+
+### Step 5
+
+Press:
+
+```text
+~
+```
+
+and enter:
+
+```text
+exec bukhoriy
+```
+
+The config should load immediately.
+
+---
+
+# Fastest Setup
+
+For gaming clubs:
+
+```text
+Download bukhoriy.cfg
+↓
+Put in game\csgo\cfg
+↓
+Launch CS2
+↓
+Open console
+↓
+exec bukhoriy
+```
+
+---
+
+# Repository Files
+
+```text
+bukhoriy-cs2-config/
+│
+├── bukhoriy.cfg
+├── README.md
+│
+└── backup/
+    ├── cs2_user_convars_0_slot0.vcfg
+    ├── cs2_user_keys_0_slot0.vcfg
+    ├── cs2_user_keys_0_slot1.vcfg
+    ├── cs2_machine_convars.vcfg
+    └── cs2_video.txt
+```
+
+## `bukhoriy.cfg`
+
+This is the main portable config.
+
+This is normally the only file I need when playing on another PC.
+
+Run:
+
+```text
+exec bukhoriy
+```
+
+## `backup/`
+
+Contains my original CS2 configuration files.
+
+These are kept mainly for restoring settings if something gets lost or changed.
+
+---
+
+# What the CFG Restores
+
+The portable config is intended to restore things such as:
+
+```text
+✓ Sensitivity
+✓ Crosshair
+✓ Viewmodel
+✓ Radar
+✓ HUD
+✓ Keybinds
+✓ Movement binds
+✓ Audio settings
+✓ Gameplay console variables
+✓ FPS-related settings
+```
+
+---
+
+# What Must Be Set Manually
+
+Some settings are outside CS2 and therefore cannot reliably be restored through `bukhoriy.cfg`.
+
+Check these when using a new gaming PC:
+
+### Mouse
+
+```text
+DPI
+Polling Rate
+Windows mouse sensitivity
+Enhance Pointer Precision
+```
+
+### Monitor
+
+```text
+Refresh Rate
+Resolution / Scaling
+```
+
+### GPU
+
+```text
+NVIDIA Control Panel
+AMD Adrenalin
+Display scaling
+Digital Vibrance
+```
+
+### Audio
+
+```text
+Headphones
+Microphone
+Windows volume
+Audio device
+```
+
+---
+
+# If The Config Doesn't Load
+
+Make sure the filename is exactly:
+
+```text
+bukhoriy.cfg
+```
+
+Not:
+
+```text
+bukhoriy.cfg.txt
+```
+
+Windows can hide file extensions.
+
+Then check that the file is inside:
+
+```text
+Counter-Strike Global Offensive\game\csgo\cfg
+```
+
+and run:
+
+```text
+exec bukhoriy
+```
+
+---
+
+# If Console Is Disabled
+
+Go to:
+
+```text
+Settings
+→ Game
+→ Enable Developer Console (~)
+→ YES
+```
+
+Then press:
+
+```text
+~
+```
+
+---
+
+# Full Restore
+
+If I ever need to restore more than the portable CFG, the original CS2 files are stored inside the `backup` folder.
+
+CS2 account configuration files are normally found under:
+
+```text
+Steam\userdata\STEAM_ID\730\local\cfg
+```
+
+Backup files can include:
 
 ```text
 cs2_user_convars_0_slot0.vcfg
@@ -117,15 +327,30 @@ cs2_machine_convars.vcfg
 cs2_video.txt
 ```
 
-These are kept as backups.
+The portable `bukhoriy.cfg` is still preferred when using public or gaming-club PCs.
 
-For normal use, only this file is required:
+---
+
+# Security
+
+This repository contains **configuration files only**.
+
+Never upload:
 
 ```text
-bukhoriy.cfg
+Steam password
+Steam Guard codes
+API keys
+Login cookies
+Authentication tokens
+Personal information
 ```
 
-## Quick Command
+Since this repository is public, everything inside it can be viewed by anyone.
+
+---
+
+# One Command
 
 ```text
 exec bukhoriy
@@ -133,4 +358,8 @@ exec bukhoriy
 
 ---
 
-BUKHORIY CS2 CONFIG
+## BUKHORIY
+
+Personal CS2 setup.
+
+Built for quickly getting my setup back on any PC.
